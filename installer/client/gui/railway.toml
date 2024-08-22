@@ -1,0 +1,3 @@
+[service]
+name = "fabric-frontend"
+start = "npx serve -s ."

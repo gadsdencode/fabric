@@ -1,7 +1,3 @@
 [service]
 name = "fabric-backend"
-start = "python installer/server/api/fabric_api_server.py"
-
-[service]
-name = "fabric-frontend"
-start = "npx serve -s installer/client/gui"
+start = "poetry run python installer/server/api/fabric_api_server.py"
