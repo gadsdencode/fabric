@@ -5,6 +5,6 @@ WORKDIR /app
 COPY pyproject.toml poetry.lock /app/
 RUN pip install poetry && poetry install
 
-COPY . /app
+COPY . /fabric
 
 CMD ["poetry", "run", "python", "installer/server/api/fabric_api_server.py"]
