@@ -24,5 +24,9 @@ RUN poetry install --no-root --only main
 # Copy the rest of the application code
 COPY . /fabric
 
+# Set Flask environment variables
+ENV FLASK_ENV=production
+ENV FLASK_SECRET_KEY=7b9a149a3498dbf76acf94b77e0087b8d51b27e8a9482587
+
 # Specify the default command to run
 CMD ["poetry", "run", "python", "installer/server/api/fabric_api_server.py"]
