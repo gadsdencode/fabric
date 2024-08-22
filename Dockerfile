@@ -19,7 +19,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 COPY pyproject.toml poetry.lock /fabric/
 
 # Install Python dependencies
-RUN poetry install --no-root --only main
+RUN poetry install --no-root
 
 # Copy the rest of the application code
 COPY . /fabric
